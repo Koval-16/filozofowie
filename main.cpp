@@ -8,10 +8,11 @@ int main() {
     // --- MENU WYBORU ---
     std::cout << "=== PROBLEM UCZTUJACYCH FILOZOFOW ===" << std::endl;
     std::cout << "Wybierz wariant symulacji:" << std::endl;
-    std::cout << "1. Wersja Naiwna (spowoduje DEADLOCK)" << std::endl;
-    std::cout << "2. Rozwiazanie z Kelnerem (Arbitrator)" << std::endl;
-    std::cout << "3. Hierarchia Zasobow (Dijkstra)" << std::endl; // <--- DODAJ
-    std::cout << "Twój wybor (1-3): ";
+    std::cout << "1. Wersja Naiwna (Deadlock)" << std::endl;
+    std::cout << "2. Kelner (Arbitrator)" << std::endl;
+    std::cout << "3. Hierarchia (Dijkstra)" << std::endl;
+    std::cout << "4. Chandy/Misra (Distributed)" << std::endl; // <--- Opcja 4
+    std::cout << "Twój wybor (1-4): ";
 
     int choice;
     std::cin >> choice;
@@ -28,6 +29,10 @@ int main() {
             break;
         case 3: // <--- OBSŁUGA WYBORU
             config.algorithm = AlgorithmType::HIERARCHY;
+            config.duration_seconds = 15;
+            break;
+        case 4: // <--- OBSŁUGA WYBORU
+            config.algorithm = AlgorithmType::CHANDY_MISRA;
             config.duration_seconds = 15;
             break;
         default:

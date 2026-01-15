@@ -10,7 +10,8 @@
 enum class AlgorithmType {
     NAIVE,      // Wersja z Deadlockiem
     WAITER,     // Rozwiązanie z Kelnerem
-    HIERARCHY
+    HIERARCHY,
+    CHANDY_MISRA
 };
 
 struct SimulationConfig {

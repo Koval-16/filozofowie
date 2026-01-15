@@ -39,7 +39,7 @@ public:
     virtual void putDownForks();
     void dine();
     void start();
-    void stop();
+    virtual void stop();
 
     int getId() const;
     int getMeals() const;

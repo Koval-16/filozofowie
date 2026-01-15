@@ -20,4 +20,6 @@ add_executable(filozof
         WaiterPhilosopher.h
         HierarchyPhilosopher.cpp
         HierarchyPhilosopher.h
+        ChandyMisraPhilosopher.cpp
+        ChandyMisraPhilosopher.h
 )
