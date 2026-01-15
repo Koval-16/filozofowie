@@ -9,6 +9,7 @@
 #pragma once
 #include <vector>
 #include <memory>
+#include <mutex>
 #include "Config.h"
 #include "Fork.h"
 #include "Philosopher.h"
@@ -17,6 +18,7 @@ class Table {
     SimulationConfig config;
     std::vector<std::unique_ptr<Fork>> forks;
     std::vector<std::unique_ptr<Philosopher>> philosophers;
+    std::mutex waiter_mutex;
 
 public:
     Table(SimulationConfig cfg);

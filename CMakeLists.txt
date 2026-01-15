@@ -16,4 +16,6 @@ add_executable(filozof
         NaivePhilosopher.cpp
         NaivePhilosopher.h
         main.cpp
+        WaiterPhilosopher.cpp
+        WaiterPhilosopher.h
 )

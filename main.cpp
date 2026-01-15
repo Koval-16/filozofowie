@@ -1,10 +1,37 @@
+#include <iostream>
 #include "Table.h"
 #include "Config.h"
 
 int main() {
     SimulationConfig config;
-    config.num_philosophers = 5;
-    config.duration_seconds = 20;
+
+    // --- MENU WYBORU ---
+    std::cout << "=== PROBLEM UCZTUJACYCH FILOZOFOW ===" << std::endl;
+    std::cout << "Wybierz wariant symulacji:" << std::endl;
+    std::cout << "1. Wersja Naiwna (spowoduje DEADLOCK)" << std::endl;
+    std::cout << "2. Rozwiazanie z Kelnerem (Arbitrator)" << std::endl;
+    std::cout << "Twój wybor (1-2): ";
+
+    int choice;
+    std::cin >> choice;
+
+    switch(choice) {
+        case 1:
+            config.algorithm = AlgorithmType::NAIVE;
+            // Dla wersji naiwnej krótki czas, bo i tak zawiśnie
+            config.duration_seconds = 5;
+            break;
+        case 2:
+            config.algorithm = AlgorithmType::WAITER;
+            config.duration_seconds = 15; // Dłuższy czas, żeby zobaczyć że działa
+            break;
+        default:
+            std::cout << "Niepoprawny wybor. Uruchamiam wersje naiwna." << std::endl;
+            config.algorithm = AlgorithmType::NAIVE;
+            break;
+    }
+
+    std::cout << "-------------------------------------" << std::endl;
 
     Table table(config);
     table.runSimulation();

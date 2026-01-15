@@ -85,6 +85,12 @@ build CMakeFiles/filozof.dir/main.cpp.obj: CXX_COMPILER__filozof_unscanned_Debug
   OBJECT_DIR = CMakeFiles\filozof.dir
   OBJECT_FILE_DIR = CMakeFiles\filozof.dir
 
+build CMakeFiles/filozof.dir/WaiterPhilosopher.cpp.obj: CXX_COMPILER__filozof_unscanned_Debug C$:/Users/kuba/CLionProjects/filozof/WaiterPhilosopher.cpp || cmake_object_order_depends_target_filozof
+  DEP_FILE = CMakeFiles\filozof.dir\WaiterPhilosopher.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\filozof.dir
+  OBJECT_FILE_DIR = CMakeFiles\filozof.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target filozof
@@ -93,7 +99,7 @@ build CMakeFiles/filozof.dir/main.cpp.obj: CXX_COMPILER__filozof_unscanned_Debug
 #############################################
 # Link the executable filozof.exe
 
-build filozof.exe: CXX_EXECUTABLE_LINKER__filozof_Debug CMakeFiles/filozof.dir/Fork.cpp.obj CMakeFiles/filozof.dir/Philosopher.cpp.obj CMakeFiles/filozof.dir/Table.cpp.obj CMakeFiles/filozof.dir/Utils.cpp.obj CMakeFiles/filozof.dir/NaivePhilosopher.cpp.obj CMakeFiles/filozof.dir/main.cpp.obj
+build filozof.exe: CXX_EXECUTABLE_LINKER__filozof_Debug CMakeFiles/filozof.dir/Fork.cpp.obj CMakeFiles/filozof.dir/Philosopher.cpp.obj CMakeFiles/filozof.dir/Table.cpp.obj CMakeFiles/filozof.dir/Utils.cpp.obj CMakeFiles/filozof.dir/NaivePhilosopher.cpp.obj CMakeFiles/filozof.dir/main.cpp.obj CMakeFiles/filozof.dir/WaiterPhilosopher.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\filozof.dir

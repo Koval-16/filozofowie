@@ -4,21 +4,36 @@
 
 #include "Table.h"
 #include "NaivePhilosopher.h"
+#include "WaiterPhilosopher.h"
 #include <iostream>
 #include <iomanip>
 #include <thread>
 #include <chrono>
 
 Table::Table(SimulationConfig cfg) : config(cfg) {
-    for (int i = 0; i < config.num_philosophers; ++i) {
-        forks.push_back(std::make_unique<Fork>(i));
-    }
+        // 1. Tworzenie widelców
+        for (int i = 0; i < config.num_philosophers; ++i) {
+            forks.push_back(std::make_unique<Fork>(i));
+        }
 
-    for (int i = 0; i < config.num_philosophers; ++i) {
-        Fork& left = *forks[i];
-        Fork& right = *forks[(i + 1) % config.num_philosophers];
-        philosophers.push_back(std::make_unique<NaivePhilosopher>(i, left, right, config));
-    }
+        // 2. Tworzenie filozofów zależnie od wyboru
+        for (int i = 0; i < config.num_philosophers; ++i) {
+            Fork& left = *forks[i];
+            Fork& right = *forks[(i + 1) % config.num_philosophers];
+
+            // --- TUTAJ JEST LOGIKA WYBORU ---
+            switch (config.algorithm) {
+                case AlgorithmType::NAIVE:
+                    // Tworzymy wersję psującą się
+                    philosophers.push_back(std::make_unique<NaivePhilosopher>(i, left, right, config));
+                    break;
+
+                case AlgorithmType::WAITER:
+                    // Tworzymy wersję z Kelnerem (wymaga mutexu kelnera)
+                    philosophers.push_back(std::make_unique<WaiterPhilosopher>(i, left, right, config, waiter_mutex));
+                    break;
+            }
+        }
 }
 
 void Table::runSimulation() {
