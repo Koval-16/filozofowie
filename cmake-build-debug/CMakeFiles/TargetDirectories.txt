@@ -1,0 +1,3 @@
+C:/Users/kuba/CLionProjects/filozof/cmake-build-debug/CMakeFiles/filozof.dir
+C:/Users/kuba/CLionProjects/filozof/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/kuba/CLionProjects/filozof/cmake-build-debug/CMakeFiles/rebuild_cache.dir
