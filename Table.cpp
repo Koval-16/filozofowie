@@ -5,6 +5,7 @@
 #include "Table.h"
 #include "NaivePhilosopher.h"
 #include "WaiterPhilosopher.h"
+#include "HierarchyPhilosopher.h"
 #include <iostream>
 #include <iomanip>
 #include <thread>
@@ -31,6 +32,10 @@ Table::Table(SimulationConfig cfg) : config(cfg) {
                 case AlgorithmType::WAITER:
                     // Tworzymy wersję z Kelnerem (wymaga mutexu kelnera)
                     philosophers.push_back(std::make_unique<WaiterPhilosopher>(i, left, right, config, waiter_mutex));
+                    break;
+
+                case AlgorithmType::HIERARCHY: // <--- NOWY PRZYPADEK
+                    philosophers.push_back(std::make_unique<HierarchyPhilosopher>(i, left, right, config));
                     break;
             }
         }

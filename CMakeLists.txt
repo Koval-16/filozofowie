@@ -18,4 +18,6 @@ add_executable(filozof
         main.cpp
         WaiterPhilosopher.cpp
         WaiterPhilosopher.h
+        HierarchyPhilosopher.cpp
+        HierarchyPhilosopher.h
 )

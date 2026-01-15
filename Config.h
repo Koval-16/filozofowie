@@ -10,7 +10,7 @@
 enum class AlgorithmType {
     NAIVE,      // Wersja z Deadlockiem
     WAITER,     // Rozwiązanie z Kelnerem
-    // HIERARCHY // To dodasz w przyszłości
+    HIERARCHY
 };
 
 struct SimulationConfig {

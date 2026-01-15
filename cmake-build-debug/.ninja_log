@@ -1,16 +1,16 @@
 # ninja log v5
-4	1029	7901847671224216	CMakeFiles/filozof.dir/Table.cpp.obj	3b2225b95c679843
+6	1149	7901855442390320	CMakeFiles/filozof.dir/Table.cpp.obj	3b2225b95c679843
 1	869	7901819838528511	CMakeFiles/filozof.dir/Fork.cpp.obj	25a51ada3d678073
-4	763	7901822713697664	CMakeFiles/filozof.dir/main.cpp.obj	31587f9522777321
-7	1135	7901819841171451	CMakeFiles/filozof.dir/Philosopher.cpp.obj	ba49da53b6176ca4
-7	696	7901847667896456	CMakeFiles/filozof.dir/NaivePhilosopher.cpp.obj	7b1a170195a47168
-1029	1240	7901847673307510	filozof.exe	74738f73770c490c
-870	1371	7901819843555075	CMakeFiles/filozof.dir/Utils.cpp.obj	ff6be6187bcd1bc0
+11	957	7901855440425582	CMakeFiles/filozof.dir/main.cpp.obj	31587f9522777321
 9	708	7901855437892361	CMakeFiles/filozof.dir/WaiterPhilosopher.cpp.obj	4d3b3e5c6c90216
 3	949	7901855440256036	CMakeFiles/filozof.dir/Philosopher.cpp.obj	ba49da53b6176ca4
-11	957	7901855440425582	CMakeFiles/filozof.dir/main.cpp.obj	31587f9522777321
-6	1149	7901855442390320	CMakeFiles/filozof.dir/Table.cpp.obj	3b2225b95c679843
-711	1391	7901855444813842	CMakeFiles/filozof.dir/NaivePhilosopher.cpp.obj	7b1a170195a47168
-1391	1601	7901855446888585	filozof.exe	150702fd65cef2fe
 4	650	7901856019430900	CMakeFiles/filozof.dir/NaivePhilosopher.cpp.obj	7b1a170195a47168
 650	854	7901856021442597	filozof.exe	150702fd65cef2fe
+870	1371	7901819843555075	CMakeFiles/filozof.dir/Utils.cpp.obj	ff6be6187bcd1bc0
+12	743	7901863743411102	CMakeFiles/filozof.dir/WaiterPhilosopher.cpp.obj	4d3b3e5c6c90216
+10	918	7901863745156436	CMakeFiles/filozof.dir/main.cpp.obj	31587f9522777321
+4	974	7901863745675043	CMakeFiles/filozof.dir/Philosopher.cpp.obj	ba49da53b6176ca4
+7	1225	7901863748218238	CMakeFiles/filozof.dir/Table.cpp.obj	3b2225b95c679843
+744	1444	7901863750402639	CMakeFiles/filozof.dir/NaivePhilosopher.cpp.obj	7b1a170195a47168
+918	1599	7901863751980088	CMakeFiles/filozof.dir/HierarchyPhilosopher.cpp.obj	ea49549054884e3a
+1599	1813	7901863754093429	filozof.exe	779acee37cb457be

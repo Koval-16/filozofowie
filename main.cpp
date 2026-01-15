@@ -10,7 +10,8 @@ int main() {
     std::cout << "Wybierz wariant symulacji:" << std::endl;
     std::cout << "1. Wersja Naiwna (spowoduje DEADLOCK)" << std::endl;
     std::cout << "2. Rozwiazanie z Kelnerem (Arbitrator)" << std::endl;
-    std::cout << "Twój wybor (1-2): ";
+    std::cout << "3. Hierarchia Zasobow (Dijkstra)" << std::endl; // <--- DODAJ
+    std::cout << "Twój wybor (1-3): ";
 
     int choice;
     std::cin >> choice;
@@ -24,6 +25,10 @@ int main() {
         case 2:
             config.algorithm = AlgorithmType::WAITER;
             config.duration_seconds = 15; // Dłuższy czas, żeby zobaczyć że działa
+            break;
+        case 3: // <--- OBSŁUGA WYBORU
+            config.algorithm = AlgorithmType::HIERARCHY;
+            config.duration_seconds = 15;
             break;
         default:
             std::cout << "Niepoprawny wybor. Uruchamiam wersje naiwna." << std::endl;
